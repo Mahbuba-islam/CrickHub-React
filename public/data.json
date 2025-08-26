@@ -1,0 +1,54 @@
+
+[
+  {
+    "name": "Virat Kohli",
+    "country": "India",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "price": 36000000,
+    "image": "https://i.ibb.co/7Jjw4v8D/List-of-internationa.jpg"
+  },
+  {
+    "name": "Ben Stokes",
+    "country": "England",
+    "role": "All-rounder",
+    "battingStyle": "Left-handed",
+    "price": 162500000,
+    "image": "https://i.ibb.co/GQfZBtbV/rashid.webp"
+  },
+  {
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "role": "Bowler",
+    "battingStyle": "Right-handed",
+    "price": 205000000,
+    "image": "https://i.ibb.co/HpbSWzYG/Hardik.webp"
+  },
+  {
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "role": "Batsman",
+    "battingStyle": "Right-handed",
+    "price": 10486600,
+    "image": "https://i.ibb.co/CpCsw40x/bumrah.webp"
+  },
+  {
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "role": "Bowling All-rounder",
+    "battingStyle": "Right-handed",
+    "price": 180000000,
+    "image": "https://i.ibb.co/kg28wRKd/haspirit.webp"
+  },
+  
+  {
+    "name": "Dhoni",
+    "country": "Afghanistan",
+    "role": "Bowling All-rounder",
+    "battingStyle": "Right-handed",
+    "price": 180000000,
+    "image": "https://i.ibb.co/s91bV5mr/dhoni.png"
+  }
+  
+]
+
