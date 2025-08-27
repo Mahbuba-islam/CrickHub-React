@@ -2,8 +2,8 @@
 import './App.css'
 import Footer from './Components/Footer/Footer'
 import Headers from './Components/Headers/Headers'
-import NewsLetter from './Components/NewsLetter/NewsLetter'
 import Players from './Components/Players/Players'
+import { ToastContainer} from 'react-toastify'
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
      </Players>
        
      <Footer></Footer>
-     
+     <ToastContainer/>
     </div>
     
     </>

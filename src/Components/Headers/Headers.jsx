@@ -1,12 +1,34 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getNumberFromLS, setNumberInLS } from "../../utility/utility";
+import { toast } from "react-toastify";
+import Players from "../Players/Players";
 
 const Headers = () => {
     const [coin, setCoin] = useState(0)
+
+
     const handleClaimCredit = () => {
-     const addCoin = 100000
+     const addCoin = Math.floor(Math.random()*(5000000000-1000000000))+1
      const newCoin = coin + addCoin
      setCoin(newCoin)
+     setNumberInLS(addCoin)
+     toast.success(`💰 ${addCoin.toLocaleString()} added to your wallet`)
     }
+
+  useEffect(()=> {
+    const getCoinFromLs = getNumberFromLS()
+    setCoin(getCoinFromLs)
+  },[])
+
+
+  const handleChoosePlayer = (playerPrice) => {
+   const remainingCoin = coin - playerPrice
+ playerPrice<coin ? (setCoin(remainingCoin),
+ toast.success(`✅ player Added`)) : toast.error(`❌ not enough coins `)
+   
+  }
+
+
     return (
         <div>
             <div className="flex flex-col md:flex-row justify-between items-center space-y-3">
@@ -28,7 +50,8 @@ const Headers = () => {
             <p className="text-xs text-gray-300">Beyond Boundaries Limits</p>
             <button onClick={handleClaimCredit} className="btn bg-[#e2f829] p-2 rounded font-bold">Claim Free Credit</button>
             </div>
-           
+
+           <Players handleChoosePlayer={handleChoosePlayer}></Players>
         </div>
         </div>
         
