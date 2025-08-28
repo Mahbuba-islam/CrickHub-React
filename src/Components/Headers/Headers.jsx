@@ -1,36 +1,12 @@
-import { useEffect, useState } from "react";
-import { getNumberFromLS, setNumberInLS } from "../../utility/utility";
-import { toast } from "react-toastify";
-import Players from "../Players/Players";
-
-const Headers = () => {
-    const [coin, setCoin] = useState(0)
 
 
-    const handleClaimCredit = () => {
-     const addCoin = Math.floor(Math.random()*(5000000000-1000000000))+1
-     const newCoin = coin + addCoin
-     setCoin(newCoin)
-     setNumberInLS(addCoin)
-     toast.success(`💰 ${addCoin.toLocaleString()} added to your wallet`)
-    }
-
-  useEffect(()=> {
-    const getCoinFromLs = getNumberFromLS()
-    setCoin(getCoinFromLs)
-  },[])
+const Headers = ({handleClaimCredit,coin}) => {
 
 
-  const handleChoosePlayer = (playerPrice) => {
-   const remainingCoin = coin - playerPrice
- playerPrice<coin ? (setCoin(remainingCoin),
- toast.success(`✅ player Added`)) : toast.error(`❌ not enough coins `)
-   
-  }
-
-
-    return (
+return (
+    
         <div>
+         
             <div className="flex flex-col md:flex-row justify-between items-center space-y-3">
             
             <div><img src="/src/assets/logo.png" alt="" /></div>
@@ -51,11 +27,13 @@ const Headers = () => {
             <button onClick={handleClaimCredit} className="btn bg-[#e2f829] p-2 rounded font-bold">Claim Free Credit</button>
             </div>
 
-           <Players handleChoosePlayer={handleChoosePlayer}></Players>
+          
         </div>
-        </div>
-        
-    );
-};
 
+        </div>
+       
+    );
+    
+};
+ 
 export default Headers;
