@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Player from '../Player/Player'
-import SelectedPlayers from '../SelectedPlayers/SelectedPlayers'
+import SelectedPlayers from '../SelectedPlayer/SelectedPlayer'
 import { toast } from "react-toastify";
 
 const Players = ({coin, setCoin}) => {
@@ -42,6 +42,7 @@ player.price<coin ? (setCoin(remainingCoin),
    
    
          {/* Header Section */}
+     
   <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
     <h1 className="font-bold text-xl sm:text-2xl p-2 rounded bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md">
       Available Players
@@ -60,10 +61,13 @@ player.price<coin ? (setCoin(remainingCoin),
 
 <div>
   {
-    showSelectedPlayers ? (<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-52">
+    showSelectedPlayers ? (<div className="grid grid-cols-1 gap-4 pb-52">
       {
-        selected.map(s => <SelectedPlayers s={s}></SelectedPlayers>)
+        selected.map(selectedPlayer => <SelectedPlayers selectedPlayer={selectedPlayer}></SelectedPlayers>)
       }
+      <div className="border border-black w-1/6 rounded-lg p-2">
+        <button className="text-center font-bold p-2   bg-lime-300 w-full  rounded-lg  ">Add More Player</button>
+        </div>
     </div>)
  :
     (<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pb-52">
