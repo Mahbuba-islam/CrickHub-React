@@ -11,4 +11,18 @@ const setNumberInLS = (number) => {
     localStorage.setItem('coin', newCoinString)
 }
 
-export {setNumberInLS, getNumberFromLS}
+
+// player LS
+const getPlayerFromLS = () => {
+  const selectedPlayers = localStorage.getItem('selectedPlayers')
+  return selectedPlayers ? JSON.parse(selectedPlayers) : []
+}
+
+const saveItemInLS = (player) => {
+  const selectedPlayers = getPlayerFromLS()
+  const allSelected = [...selectedPlayers, player]
+  const allSelectedString = JSON.stringify(allSelected)
+  localStorage.setItem('selectedPlayers', allSelectedString)
+}
+
+export {setNumberInLS, getNumberFromLS, saveItemInLS, getPlayerFromLS}
