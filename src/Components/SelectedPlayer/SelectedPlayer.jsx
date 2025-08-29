@@ -1,9 +1,12 @@
+
 import { FaTrashAlt } from "react-icons/fa";
 
-const SelectedPlayer = ({selectedPlayer}) => {
+const SelectedPlayer = ({selectedPlayer, handleShowConfirm}) => {
 const {name, image, battingStyle} = selectedPlayer
+
     return (
         <div className="flex justify-between items-center border border-gray-400 rounded-lg p-4">
+            
             <div className="flex items-center space-x-4">
                 <img className="w-20 h-15 rounded-lg" src={image} alt="" />
             <div>
@@ -11,7 +14,7 @@ const {name, image, battingStyle} = selectedPlayer
             <p>{battingStyle}</p>
             </div>
            </div>
-           <button className="text-red-700"><FaTrashAlt /></button>
+           <button onClick={()=> handleShowConfirm(name)} className="text-red-700"><FaTrashAlt /></button>
         </div>
     );
 };

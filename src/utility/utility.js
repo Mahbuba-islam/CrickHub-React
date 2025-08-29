@@ -18,10 +18,10 @@ const getPlayerFromLS = () => {
   return selectedPlayers ? JSON.parse(selectedPlayers) : []
 }
 
-const saveItemInLS = (player) => {
+const saveItemInLS = (id) => {
   const selectedPlayers = getPlayerFromLS()
-  const allSelected = [...selectedPlayers, player]
-  const allSelectedString = JSON.stringify(allSelected)
+ const updatedPlayers = [...selectedPlayers, id]; 
+  const allSelectedString = JSON.stringify(updatedPlayers)
   localStorage.setItem('selectedPlayers', allSelectedString)
 }
 

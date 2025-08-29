@@ -1,6 +1,6 @@
-
 [
   {
+    "id": 1,
     "name": "Virat Kohli",
     "country": "India",
     "role": "Batsman",
@@ -9,6 +9,7 @@
     "image": "https://i.ibb.co/7Jjw4v8D/List-of-internationa.jpg"
   },
   {
+    "id": 2,
     "name": "Ben Stokes",
     "country": "England",
     "role": "All-rounder",
@@ -17,6 +18,7 @@
     "image": "https://i.ibb.co/GQfZBtbV/rashid.webp"
   },
   {
+    "id": 3,
     "name": "Pat Cummins",
     "country": "Australia",
     "role": "Bowler",
@@ -25,6 +27,7 @@
     "image": "https://i.ibb.co/HpbSWzYG/Hardik.webp"
   },
   {
+    "id": 4,
     "name": "Babar Azam",
     "country": "Pakistan",
     "role": "Batsman",
@@ -33,6 +36,7 @@
     "image": "https://i.ibb.co/CpCsw40x/bumrah.webp"
   },
   {
+    "id": 5,
     "name": "Rashid Khan",
     "country": "Afghanistan",
     "role": "Bowling All-rounder",
@@ -40,8 +44,8 @@
     "price": 180000000,
     "image": "https://i.ibb.co/kg28wRKd/haspirit.webp"
   },
-  
   {
+    "id": 6,
     "name": "Dhoni",
     "country": "Afghanistan",
     "role": "Bowling All-rounder",
@@ -49,6 +53,4 @@
     "price": 180000000,
     "image": "https://i.ibb.co/s91bV5mr/dhoni.png"
   }
-  
 ]
-
